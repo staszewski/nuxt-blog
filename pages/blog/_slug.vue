@@ -1,9 +1,9 @@
 <template>
-  <article>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.description }}</p>
-    <nuxt-content :document="article" />
-  </article>
+  <Article
+    v-bind:title="article.title"
+    v-bind:description="article.description"
+    v-bind:article="article"
+  />
 </template>
 <script lang="ts">
 import Vue from 'vue'
