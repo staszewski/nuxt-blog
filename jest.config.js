@@ -15,4 +15,6 @@ module.exports = {
     '<rootDir>/components/**/*.vue',
     '<rootDir>/pages/**/*.vue',
   ],
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
+  setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
 }
