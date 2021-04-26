@@ -1,27 +1,25 @@
 <template>
   <article>
-    <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
-    <nuxt-content :is="content" :document="article" />
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.description }}</p>
+    <NuxtContent :is="blogcontent" :document="article" />
   </article>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue, { PropType } from 'vue'
+import { IContentDocument } from '@nuxt/content/types/content'
 
 export default Vue.extend({
+  name: 'Article',
   props: {
-    title: {
-      type: String,
-      default: '',
-    },
-    description: {
-      type: String,
-      default: '',
-    },
     article: {
-      type: String,
-      default: '',
+      type: Object as PropType<
+        IContentDocument & { title: string; description: string }
+      >,
+      default() {
+        return {}
+      },
     },
   },
 })
