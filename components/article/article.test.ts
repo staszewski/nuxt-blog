@@ -1,13 +1,23 @@
 import { screen, render } from '@testing-library/vue'
 import Article from '~/components/article/article.vue'
-test('should ', () => {
+
+test('title and description are rendered', () => {
+  const title = 'Test title'
+  const description = 'Test description'
   render(Article, {
     props: {
       article: {
-        title: 'lala',
+        title,
+        description,
       },
     },
   })
-  screen.debug()
-  expect(screen.getByText('lala')).toBeTruthy()
+  expect(screen.getByText(title)).toBeInTheDocument()
+  expect(screen.getByText(description)).toBeInTheDocument()
+})
+
+test('default props test', () => {
+  render(Article)
+  expect(screen.getByText('Something went wrong')).toBeInTheDocument()
+  expect(screen.getByText('Please go to main page')).toBeInTheDocument()
 })

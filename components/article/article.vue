@@ -18,7 +18,10 @@ export default Vue.extend({
         IContentDocument & { title: string; description: string }
       >,
       default() {
-        return {}
+        return {
+          title: 'Something went wrong',
+          description: 'Please go to main page',
+        }
       },
     },
   },
