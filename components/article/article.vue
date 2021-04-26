@@ -2,7 +2,7 @@
   <article>
     <h1>{{ title }}</h1>
     <p>{{ description }}</p>
-    <nuxt-content :document="article" :is="content" />
+    <nuxt-content :is="content" :document="article" />
   </article>
 </template>
 
@@ -11,9 +11,18 @@ import Vue from 'vue'
 
 export default Vue.extend({
   props: {
-    title: String,
-    description: String,
-    article: Object,
+    title: {
+      type: String,
+      default: '',
+    },
+    description: {
+      type: String,
+      default: '',
+    },
+    article: {
+      type: String,
+      default: '',
+    },
   },
 })
 </script>

@@ -1,8 +1,8 @@
 <template>
   <Article
-    v-bind:title="article.title"
-    v-bind:description="article.description"
-    v-bind:article="article"
+    :title="article.title"
+    :description="article.description"
+    :article="article"
   />
 </template>
 <script lang="ts">
