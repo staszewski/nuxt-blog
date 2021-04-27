@@ -1,14 +1,14 @@
 <template>
   <div id="container">
-    <Header />
+    <Heading />
     <Nuxt />
   </div>
 </template>
 <script lang="ts">
-import Header from '~/components/header/header.vue'
+import Heading from '~/components/heading/heading'
 
 export default {
-  components: { Header },
+  components: { Heading },
 }
 </script>
 <style>
