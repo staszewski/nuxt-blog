@@ -1,9 +1,11 @@
 <template>
-  <article>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.description }}</p>
-    <NuxtContent :is="blogcontent" :document="article" />
-  </article>
+  <main>
+    <article>
+      <h1 class="text-red-400 text-3xl font-bold">{{ article.title }}</h1>
+      <p>{{ article.description }}</p>
+      <NuxtContent :document="article" />
+    </article>
+  </main>
 </template>
 
 <script lang="ts">

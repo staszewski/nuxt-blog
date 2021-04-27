@@ -1,9 +1,16 @@
 <template>
-  <div>
+  <div id="container">
+    <Header />
     <Nuxt />
   </div>
 </template>
+<script lang="ts">
+import Header from '~/components/header/header.vue'
 
+export default {
+  components: { Header },
+}
+</script>
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -24,32 +31,8 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+#container {
+  margin: 0px auto;
+  max-width: 960px;
 }
 </style>
