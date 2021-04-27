@@ -5,7 +5,7 @@
   </div>
 </template>
 <script lang="ts">
-import Heading from '~/components/heading/heading'
+import Heading from '~/components/heading/heading.vue'
 
 export default {
   components: { Heading },
