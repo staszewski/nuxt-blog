@@ -1,7 +1,11 @@
 <template>
   <ul>
     <li v-for="article in articles" :key="article.createdAt">
-      {{ article.title }}
+      <a
+        :href="'blog/' + article.slug"
+        class="text-red-400 text-3xl font-bold"
+        >{{ article.title }}</a
+      >
     </li>
   </ul>
 </template>
@@ -18,6 +22,4 @@ export default Vue.extend({
 })
 </script>
 
-<style>
-
-</style>
+<style></style>
