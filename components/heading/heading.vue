@@ -1,5 +1,5 @@
 <template>
-  <header class="sm:py-3">
+  <header class="phone:py-6 tablet:py-8">
     <nav>
       <h1 class="text-red-400 text-3xl font-bold">
         <NuxtLink to="/">Notes</NuxtLink>

@@ -1,7 +1,9 @@
 <template>
   <main>
     <article>
-      <h1 class="text-red-400 text-3xl font-bold">{{ article.title }}</h1>
+      <h1 class="text-red-400 text-3xl font-bold phone:py-2 tablet:py-6">
+        {{ article.title }}
+      </h1>
       <p>{{ article.description }}</p>
       <NuxtContent :document="article" />
     </article>
