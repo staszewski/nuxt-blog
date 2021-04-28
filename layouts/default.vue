@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div id="container" class="phone:px-6 tablet:px-8">
     <Heading />
     <Nuxt />
   </div>
@@ -9,6 +9,11 @@ import Heading from '~/components/heading/heading.vue'
 
 export default {
   components: { Heading },
+  head: {
+    bodyAttrs: {
+      class: 'bg-green-300',
+    },
+  },
 }
 </script>
 <style>
