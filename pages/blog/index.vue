@@ -1,20 +1,24 @@
 <template>
   <ul>
     <li v-for="article in articles" :key="article.createdAt">
-      <a
-        :href="'blog/' + article.slug"
-        class="text-red-400 text-3xl font-bold"
-        >{{ article.title }}</a
-      >
+      <Card :article="article" />
     </li>
   </ul>
 </template>
 
 <script>
 import Vue from 'vue'
+import Card from '~/components/card/card.vue'
 
 export default Vue.extend({
-  name: 'Posts',
+  name: 'Blog',
+  components: {
+    Card,
+  },
+  transition: {
+    name: 'blog',
+    mode: 'out-in',
+  },
   async asyncData({ $content }) {
     const articles = await $content('articles').fetch()
     return { articles }
@@ -22,4 +26,13 @@ export default Vue.extend({
 })
 </script>
 
-<style></style>
+<style>
+.blog-enter-active,
+.blog-leave-active {
+  transition: opacity 1.5s;
+}
+.blog-enter,
+.blog-leave {
+  opacity: 0;
+}
+</style>
