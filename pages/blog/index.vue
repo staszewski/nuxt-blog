@@ -27,15 +27,6 @@ export default Vue.extend({
 </script>
 
 <style>
-@keyframes fadeIn {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 .blog-leave-active {
   animation: 500ms fadeIn;
 }
