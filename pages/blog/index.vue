@@ -27,12 +27,16 @@ export default Vue.extend({
 </script>
 
 <style>
-.blog-enter-active,
-.blog-leave-active {
-  transition: opacity 1.5s;
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
-.blog-enter,
-.blog-leave {
-  opacity: 0;
+
+.blog-leave-active {
+  animation: 500ms fadeIn;
 }
 </style>
