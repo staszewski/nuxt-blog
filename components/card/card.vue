@@ -1,13 +1,10 @@
 <template>
-  <main>
-    <article>
-      <h1 class="text-red-400 text-3xl font-bold">
-        {{ article.title }}
-      </h1>
+  <NuxtLink :to="'blog/' + article.slug">
+    <div>
+      <h3 class="text-red-400 text-3xl font-bold">{{ article.title }}</h3>
       <p>{{ article.description }}</p>
-      <NuxtContent :document="article" />
-    </article>
-  </main>
+    </div>
+  </NuxtLink>
 </template>
 
 <script lang="ts">
@@ -15,7 +12,7 @@ import Vue, { PropType } from 'vue'
 import { IContentDocument } from '@nuxt/content/types/content'
 
 export default Vue.extend({
-  name: 'Article',
+  name: 'Card',
   props: {
     article: {
       type: Object as PropType<
@@ -32,4 +29,4 @@ export default Vue.extend({
 })
 </script>
 
-<style></style>
+<style scoped></style>

@@ -4,6 +4,7 @@
       <h1 class="text-red-400 text-3xl font-bold">
         <NuxtLink to="/">Notes</NuxtLink>
       </h1>
+      <NuxtLink to="/blog">Blog</NuxtLink>
     </nav>
   </header>
 </template>
