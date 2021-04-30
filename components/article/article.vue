@@ -16,7 +16,6 @@ import { IContentDocument } from '@nuxt/content/types/content'
 
 export default Vue.extend({
   name: 'Article',
-
   props: {
     article: {
       type: Object as PropType<
@@ -33,17 +32,4 @@ export default Vue.extend({
 })
 </script>
 
-<style>
-@keyframes fadeIn {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-.article-leave-active {
-  animation: 500ms fadeIn;
-}
-</style>
+<style></style>
