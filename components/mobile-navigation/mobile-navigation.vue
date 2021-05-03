@@ -4,7 +4,9 @@
     <div class="mobile-nav" v-if="open">
       <nav>
         <ul>
-          <li>Mobile nav</li>
+          <li v-on:click="open = !open">
+            <NuxtLink to="/blog">Blog</NuxtLink>
+          </li>
         </ul>
       </nav>
     </div>
@@ -58,5 +60,4 @@ button {
 nav {
   animation: 800ms cubic-bezier(0.535, 0, 0, 1) slideIn;
 }
-
 </style>
