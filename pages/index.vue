@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-red-400">Main page</h1>
+  <h1 class="text-red-400">Hi, my name is Kamil</h1>
 </template>
 
 <script lang="ts">

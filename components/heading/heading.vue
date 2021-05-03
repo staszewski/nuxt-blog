@@ -4,16 +4,19 @@
       <NuxtLink to="/">Notes</NuxtLink>
     </h1>
     <Navigation />
+    <MobileNavigation />
   </header>
 </template>
 
 <script>
 import Navigation from '~/components/navigation/navigation.vue'
+import MobileNavigation from '~/components/mobile-navigation/mobile-navigation.vue'
 
 export default {
   name: 'heading',
   components: {
     Navigation,
+    MobileNavigation,
   },
 }
 </script>

@@ -1,8 +1,8 @@
 <template>
-  <nav>
+  <nav class="phone:hidden tablet:block">
     <ul>
       <li v-for="navigationItem in navigationItems" :key="navigationItem.url">
-        <NuxtLink :to="navigationItem.url"> {{ navigationItem.name }}</NuxtLink>
+        <NuxtLink :to="navigationItem.url">{{ navigationItem.name }}</NuxtLink>
       </li>
     </ul>
   </nav>
