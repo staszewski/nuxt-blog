@@ -1,11 +1,19 @@
 <template>
   <div class="tablet:hidden">
-    <button v-on:click="open = !open">Toggle menu</button>
+    <button v-on:click="open = !open" aria-label="Open menu">
+      <MobileNavigationIcon :open="open"/>
+    </button>
     <div class="mobile-nav" v-if="open">
       <nav>
         <ul>
-          <li v-on:click="open = !open">
-            <NuxtLink to="/blog">Blog</NuxtLink>
+          <li
+            v-on:click="open = !open"
+            v-for="navigationItem in navigationItems"
+            :key="navigationItem.url"
+          >
+            <NuxtLink :to="navigationItem.url">{{
+              navigationItem.name
+            }}</NuxtLink>
           </li>
         </ul>
       </nav>
@@ -15,6 +23,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import MobileNavigationIcon from '~/components/mobile-navigation-icon/mobile-navigation-icon.vue'
 
 interface State {
   open: boolean
@@ -22,10 +31,21 @@ interface State {
 
 export default Vue.extend({
   name: 'mobile-navigation',
+  components: {
+    MobileNavigationIcon,
+  },
   data(): State {
     return {
       open: false,
     }
+  },
+  props: {
+    navigationItems: {
+      type: Array,
+      default() {
+        return []
+      },
+    },
   },
 })
 </script>
@@ -45,7 +65,7 @@ button {
   top: 1rem;
   z-index: 10001;
   right: 32px;
-  width: 40px;
+  width: 60px;
 }
 
 .mobile-nav {
@@ -55,9 +75,6 @@ button {
   width: 100%;
   height: 100%;
   background-color: red;
-}
-
-nav {
   animation: 800ms cubic-bezier(0.535, 0, 0, 1) slideIn;
 }
 </style>

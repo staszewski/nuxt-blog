@@ -11,26 +11,15 @@
 <script lang="ts">
 import Vue from 'vue'
 
-interface NavigationItem {
-  name: string
-  url: string
-}
-
-interface State {
-  navigationItems: NavigationItem[]
-}
-
-const navigationItems: NavigationItem[] = [
-  { name: 'Blog', url: '/blog' },
-  { name: 'About', url: '/about' },
-]
-
 export default Vue.extend({
   name: 'navigation-component',
-  data(): State {
-    return {
-      navigationItems,
-    }
+  props: {
+    navigationItems: {
+      type: Array,
+      default() {
+        return []
+      },
+    },
   },
 })
 </script>
