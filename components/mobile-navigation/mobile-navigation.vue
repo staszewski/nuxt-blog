@@ -1,6 +1,6 @@
 <template>
   <div class="tablet:hidden">
-    <button aria-label="Open menu" @click="open = !open" class="">
+    <button aria-label="Open menu" @click="open = !open">
       <MobileNavigationIcon :open="open" />
     </button>
     <div v-if="open" class="mobile-nav">
