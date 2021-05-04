@@ -1,10 +1,10 @@
 <template>
   <div class="tablet:hidden">
     <button v-on:click="open = !open" aria-label="Open menu">
-      <MobileNavigationIcon :open="open"/>
+      <MobileNavigationIcon :open="open" />
     </button>
     <div class="mobile-nav" v-if="open">
-      <nav>
+      <nav aria-label="Mobile navigation">
         <ul>
           <li
             v-on:click="open = !open"
