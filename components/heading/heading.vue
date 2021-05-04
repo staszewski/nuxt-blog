@@ -3,8 +3,8 @@
     <h1 class="text-red-400 text-3xl font-bold">
       <NuxtLink to="/">Notes</NuxtLink>
     </h1>
-    <Navigation :navigationItems="navigationItems" />
-    <MobileNavigation :navigationItems="navigationItems" />
+    <Navigation :navigation-items="navigationItems" />
+    <MobileNavigation :navigation-items="navigationItems" />
   </header>
 </template>
 
@@ -27,7 +27,7 @@ const navigationItems: NavigationItem[] = [
 ]
 
 export default {
-  name: 'heading',
+  name: 'Heading',
   components: {
     Navigation,
     MobileNavigation,

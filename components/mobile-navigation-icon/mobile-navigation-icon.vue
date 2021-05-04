@@ -1,5 +1,5 @@
 <template>
-  <div id="nav-icon" v-bind:class="{ open }">
+  <div id="nav-icon" :class="{ open }">
     <span></span>
     <span></span>
     <span></span>
@@ -10,7 +10,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'mobile-navigation-icon',
+  name: 'MobileNavigationIcon',
   props: {
     open: {
       type: Boolean,

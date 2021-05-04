@@ -1,15 +1,15 @@
 <template>
   <div class="tablet:hidden">
-    <button v-on:click="open = !open" aria-label="Open menu">
+    <button aria-label="Open menu" @click="open = !open">
       <MobileNavigationIcon :open="open" />
     </button>
-    <div class="mobile-nav" v-if="open">
+    <div v-if="open" class="mobile-nav">
       <nav aria-label="Mobile navigation">
         <ul>
           <li
-            v-on:click="open = !open"
             v-for="navigationItem in navigationItems"
             :key="navigationItem.url"
+            @click="open = !open"
           >
             <NuxtLink :to="navigationItem.url">{{
               navigationItem.name
@@ -30,14 +30,9 @@ interface State {
 }
 
 export default Vue.extend({
-  name: 'mobile-navigation',
+  name: 'MobileNavigation',
   components: {
     MobileNavigationIcon,
-  },
-  data(): State {
-    return {
-      open: false,
-    }
   },
   props: {
     navigationItems: {
@@ -46,6 +41,11 @@ export default Vue.extend({
         return []
       },
     },
+  },
+  data(): State {
+    return {
+      open: false,
+    }
   },
 })
 </script>
