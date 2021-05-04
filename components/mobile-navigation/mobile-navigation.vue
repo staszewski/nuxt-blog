@@ -1,6 +1,6 @@
 <template>
   <div class="tablet:hidden">
-    <button aria-label="Open menu" @click="open = !open">
+    <button aria-label="Open menu" @click="open = !open" class="">
       <MobileNavigationIcon :open="open" />
     </button>
     <div v-if="open" class="mobile-nav">
@@ -69,6 +69,7 @@ button {
 }
 
 .mobile-nav {
+  z-index: 10000;
   position: fixed;
   top: 0;
   left: 0;
