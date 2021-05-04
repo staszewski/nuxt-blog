@@ -32,8 +32,4 @@ export default Vue.extend({
 })
 </script>
 
-<style>
-.nuxt-content-container {
-  position: initial;
-}
-</style>
+<style></style>
