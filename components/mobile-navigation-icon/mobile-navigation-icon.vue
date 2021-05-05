@@ -27,7 +27,7 @@ export default Vue.extend({
   width: 60px;
   height: 45px;
   position: relative;
-  margin: 50px auto;
+  margin: 10px auto;
   transform: rotate(0deg);
   transition: 0.5s 0.5s cubic-bezier(0.55, 0.06, 0.68, 0.19);
   cursor: pointer;

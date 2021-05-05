@@ -1,10 +1,10 @@
 <template>
-  <header class="flex phone:py-6 tablet:py-8">
+  <header class="flex phone:py-6 tablet:py-8 tablet:justify-between">
     <h1 class="text-red-400 text-3xl font-bold">
       <NuxtLink to="/">Notes</NuxtLink>
     </h1>
-    <Navigation :navigation-items="navigationItems" />
     <MobileNavigation :navigation-items="navigationItems" />
+    <Navigation :navigation-items="navigationItems" />
   </header>
 </template>
 
