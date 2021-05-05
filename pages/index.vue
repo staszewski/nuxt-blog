@@ -1,5 +1,12 @@
 <template>
-  <h1 class="text-red-400">Hi, my name is Kamil</h1>
+  <main class="phone:flex phone:flex-col">
+    <h1
+      class="text-gray-900 text-6xl phone:py-4 tablet:py-8 text-4xl phone:flex-1"
+    >
+      Hi, my name is Kamil
+    </h1>
+    <img src="~/assets/dev-focus.svg" alt="Developer focus" />
+  </main>
 </template>
 
 <script lang="ts">
