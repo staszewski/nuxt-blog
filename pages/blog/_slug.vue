@@ -14,10 +14,5 @@ export default Vue.extend({
     const article = await $content('articles', params.slug).fetch()
     return { article }
   },
-  head: {
-    bodyAttrs: {
-      class: 'bg-green-300',
-    },
-  },
 })
 </script>

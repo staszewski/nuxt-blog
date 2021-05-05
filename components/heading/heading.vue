@@ -1,6 +1,6 @@
 <template>
   <header class="flex phone:py-6 tablet:py-8 tablet:justify-between">
-    <h1 class="text-red-400 text-3xl font-bold">
+    <h1 class="text-gray-900 text-3xl font-bold">
       <NuxtLink to="/">Notes</NuxtLink>
     </h1>
     <MobileNavigation :navigation-items="navigationItems" />

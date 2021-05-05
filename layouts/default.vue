@@ -9,16 +9,11 @@ import Heading from '~/components/heading/heading.vue'
 
 export default {
   components: { Heading },
-  head: {
-    bodyAttrs: {
-      class: 'bg-green-300',
-    },
-  },
 }
 </script>
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  font-family: 'Mukta', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
@@ -27,6 +22,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  background: #a6a4d2;
 }
 
 *,
