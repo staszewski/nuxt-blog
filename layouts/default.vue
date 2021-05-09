@@ -1,16 +1,20 @@
 <template>
-  <main>
-    <div id="container" class="phone:px-6 tablet:px-8">
-      <Heading />
-      <Nuxt />
-    </div>
-  </main>
+  <div>
+    <main>
+      <div id="container" class="phone:px-6 tablet:px-8">
+        <Heading />
+        <Nuxt />
+      </div>
+    </main>
+    <Footer />
+  </div>
 </template>
 <script lang="ts">
 import Heading from '~/components/heading/heading.vue'
+import Footer from '~/components/footer/footer.vue'
 
 export default {
-  components: { Heading },
+  components: { Heading, Footer },
 }
 </script>
 <style>
